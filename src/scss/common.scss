@@ -1,0 +1,114 @@
+// Заголовки, загальні БЕМ блоки та інше...
+
+.title {
+  display: inline-block;
+  font-family: 'Playfair Display';
+  font-size: rem(64);
+  line-height: 1.57;
+  color: $darkColor;
+  position: relative;
+  padding-bottom: rem(20);
+  margin-bottom: rem(32);
+  @media (max-width:$tablet){
+    font-size: rem(54);
+    line-height: 1.33;
+  }
+  @media (max-width:$mobile){
+    font-size: rem(40);
+  }
+  &::after{
+    content:'';
+    width: 60%;
+    height: rem(3);
+    background-color: $orangeColor;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+  }
+
+  &--right {
+    &::after{
+      left: auto;
+      right: 0;
+    }
+  }
+}
+
+.subtitle {
+  font-size: rem(24);
+    line-height: 1.2;
+    @media (max-width:$tablet){
+      font-size: rem(20);
+      
+    }
+    @media (max-width:$mobile){
+      font-size: rem(18);
+    }
+}
+
+// кнопки
+.button {
+	display: flex;
+	align-items: center;
+	padding: rem(20) rem(32);
+	background: #FF7757;
+	border-radius: 12px;
+	transition: 0.3s;
+	gap: rem(36);
+	font-size: rem(20);
+	line-height: 1.2;
+	color: #FFFFFF;
+ 	@media (any-hover: hover){
+		&:hover{
+			background: #D46349;
+		}
+	}
+  &--book{
+    font-family: 'Playfair Display';
+    padding: rem(60) rem(20);
+    font-size: rem(36);    
+    flex: 0 0 rem(170);
+    position: relative;
+    line-height: 1.33;
+    border-radius: 0px 20px 20px 0px;
+    @media (max-width:$mobile){
+      border-radius: 0px 0px 20px 20px; 
+      flex: 0 0 rem(128);
+      padding: rem(40) rem(20);
+    }
+    span {
+      display: flex;
+      gap: rem(12);
+      align-items: center;
+      justify-content: space-between;
+      width: 100%;
+      text-align: left;
+      &::before{
+        flex: 0 0 rem(21);
+        order: 1;
+      }
+    }
+   
+  }
+  &--slider{
+    padding: 24px 21px;
+    border-radius: 12px;
+    display: flex;
+    @media (any-hover: hover){
+      &:hover{
+        background: #172432;
+        color: #FFFFFF;;
+      }
+    }
+  }
+  
+}
+.rating{
+  display: flex;
+  gap: rem(6);
+}
+.star{
+  color: #FFC107;
+  font-size: rem(20);
+}
+

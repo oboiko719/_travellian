@@ -1,0 +1,94 @@
+.destinations {
+  @include adaptiveValue("padding-top", 100, 50);
+  @include adaptiveValue("padding-bottom", 100, 25);
+  // .destinations__container
+  &__container {}
+  // .destinations__box
+  &__box {
+    display: flex;
+    justify-content: space-between;
+    gap: rem(100);
+    @include adaptiveValue("padding-bottom", 100, 45);
+  }
+  
+  // .destinations__title
+  &__title {}
+  // .destinations__subtitle
+  &__subtitle {}
+  // .destinations__slider
+  &__slider {
+    overflow: visible !important; 
+    @media (max-width: em(767)){
+      overflow: hidden !important; 
+    }
+  }
+  // .destinations__buttons
+  &__buttons {
+    display: flex;
+    gap: rem(40);
+    align-items:flex-end;
+    @media (max-width:$tablet){
+      justify-content: center;
+      margin-top: rem(50);
+    }
+  }
+   // .destinations__button
+  &__button {}
+  // .destinations__wrapper
+  &__wrapper {}
+  // .destinations__slide
+  &__slide {
+  background-image: url(../img/destinations/01.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position:bottom;
+  border-radius: 26px;
+  padding: rem(40) rem(24);
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  align-items: flex-start;
+  min-height: 661px;
+  @media (max-width: em(1152)){
+    min-height: 456px;
+}
+  @media (max-width: em(768)){
+      min-height: 320px;
+  }
+  &--02{
+    background-image: url(../img/destinations/02.jpg);
+  }
+  &--03{
+    background-image: url(../img/destinations/03.jpg);
+  }
+  &--04{
+    background-image: url(../img/destinations/04.jpg);
+  }
+  }
+  // .destinations__name
+  &__name {
+    font-family: 'Playfair Display';
+    font-weight: 500;
+    font-size: rem(28);    
+    line-height: 1.32;
+    color: #FFFFFF;
+    margin-bottom: rem(17);
+    @media (max-width:$mobile){
+      font-size: rem(24); 
+    }
+  }
+  // .destinations__locations
+  &__locations {
+    font-size: 24px;
+    line-height: 28px;
+    color: #FFFFFF;
+    display: flex;
+    gap: rem(16);    
+  }
+}
+.swiper-button-prev {
+  transform: rotate(180deg)
+}
+.swiper-button-next {  
+}
+
